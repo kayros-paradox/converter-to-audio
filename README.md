@@ -42,7 +42,7 @@ The execution result is in the audio folder.
 
 <br />
 
-## 📖 Use without installation.
+## 📖 Use without installation
 
 ### 1. Activating the virtual environment.
 ```bash
@@ -58,4 +58,6 @@ sh pip-sources.sh
 ```python
 python3 videotomp3.py <videofile>
 ```
+
+The execution result is in the audio folder.
 
