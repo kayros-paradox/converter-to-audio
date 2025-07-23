@@ -38,6 +38,8 @@ or
 ./videotomp3 <video>
 ```
 
+The execution result is in the folder.
+
 <br />
 
 ## 📖 Use without installation.
