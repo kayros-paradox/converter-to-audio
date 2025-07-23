@@ -1,4 +1,4 @@
-## Instructions for use
+## 📓 Instructions for use
 
 ### 1. Create a venv environment in your directory.
 python3 -m venv venv
