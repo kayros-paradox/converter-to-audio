@@ -32,6 +32,12 @@ sh install.sh
 videotomp3 <video>
 ```
 
+or 
+
+```bash
+./videotomp3 <video>
+```
+
 <br />
 
 ## 📖 Instructions for use
@@ -49,10 +55,5 @@ sh pip-sources.sh
 ### 3. Using (example):
 ```python
 python3 videotomp3.py <videofile>
-```
-
-### 4. Checking the result in the audio folder.
-```bash
-cd audio
 ```
 
