@@ -7,8 +7,7 @@ from moviepy import VideoFileClip
 
 OUTSRC = 'audio'
 
-
-# Скрытие вывода через контекст.
+# Hiding output via context.
 @contextmanager
 def suppress_stdout():
     original_stdout = sys.stdout
@@ -20,56 +19,55 @@ def suppress_stdout():
         sys.stdout = original_stdout
 
 
-# Проверка существования файла.
+# Hiding output via context.
 def isNotAudioExists(src):
     if os.path.exists(src):
         return questionary.confirm(
-                'Файл {src} уже существует. Вы хотите перезаписать его?'
+                'The file {src} already exists. Do you want to overwrite it?'
         ).ask()
     else:
         return True
 
-
-# Конвертация видео в аудиофайл (формат: mp3).
+# Convert video to audio file (format: mp3).
 def convertToAudio(src='video.mp4'):
     with suppress_stdout():
         video = VideoFileClip(src)
         audio = video.audio
         audio.nschannels = 1
 
-    # Извлечение audio.
+    # Extract audio.
     basesrc = os.path.basename(src)
     filename = os.path.splitext(basesrc)[0]
     audioSrc = f'{OUTSRC}/{filename}.wav'
     if isNotAudioExists(audioSrc):
         audio.write_audiofile(audioSrc, codec='pcm_s32le', bitrate='1000k')
 
-    # Закрытие.
+    # Close.
     audio.close()
     video.close()
 
 
-# Проверка расширения видео файла.
+# Checking the extension of a video file.
 def isVideo(src='source'):
     try:
-        print(f'Обрабатываем файл: {src}')
+        print(f'Processing file: {src}')
 
         with suppress_stdout():
             clip = VideoFileClip(src)
-            clip.close()  # Закрываем клип, если он успешно открыт
+            clip.close()  # Close the clip if it is successfully opened
         return True
     except Exception as e:
-        print(f'{src} не является видеофайлом или ошибка выполнения: {e}')
+        print(f'{src} is not a video file or runtime error: {e}')
         return False
 
 
-# Конвертирование видео файлов.
+# Converting video files.
 def convert(src):
     if os.path.exists(src):
         if isVideo(src):
             convertToAudio(src)
     else:
-        print(f'{src}: Файл не существует')
+        print(f'{src}: File does not exist')
 
 
 def createDir():
@@ -77,21 +75,21 @@ def createDir():
         os.makedirs(OUTSRC, exist_ok=True)
         return True
     except Exception as e:
-        print(f'Невозможно сохранить данные. Возможно ошибка разрешений: {e}')
+        print(f'Unable to save data. Possible permission error: {e}')
         return False
 
 
 def main(files):
     if createDir():
-        print('Обработка списка файлов.')
+        print('Processing file list.')
 
         for file in files:
             convert(file)
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Обработка списка файлов.')
-    parser.add_argument('files', nargs='+', help='Список файлов для обработки')
+    parser = argparse.ArgumentParser(description='Processing file list.')
+    parser.add_argument('files', nargs='+', help='List of files to process')
 
     args = parser.parse_args()
     main(args.files)
