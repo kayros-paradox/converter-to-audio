@@ -32,7 +32,7 @@ sh install.sh
 videotomp3 <video>
 ```
 
-<b>or</b> 
+or 
 
 ```bash
 ./videotomp3 <video>
