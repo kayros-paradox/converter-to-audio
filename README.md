@@ -13,7 +13,7 @@ cd audio
 
 <br/>
 
-## Installation instructions
+## 💻 Installation instructions
 
 ### 1. Create a venv environment in your directory.
 python3 -m venv venv
