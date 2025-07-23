@@ -38,7 +38,7 @@ or
 ./videotomp3 <video>
 ```
 
-The execution result is in the folder.
+The execution result is in the audio folder.
 
 <br />
 
