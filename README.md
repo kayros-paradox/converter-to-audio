@@ -3,8 +3,8 @@
 ### 1. Make sure you have python3 and python3-pip packages installed
 
 ```bash
-sudo apt install python3
-sudo apt install python3-pip
+sudo apt install python3 -y
+sudo apt install python3-pip -y
 ```
 
 ### 2. Create a venv environment in your directory.
@@ -34,7 +34,7 @@ videotomp3 <video>
 
 <br />
 
-## 🖥️ Instructions for use
+## 📖 Instructions for use
 
 ### 1. Activating the virtual environment.
 ```bash
