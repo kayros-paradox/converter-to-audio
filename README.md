@@ -1,4 +1,4 @@
-# Instructions for use
+## Instructions for use
 
 ### 1. Create a venv environment in your directory.
 python3 -m venv venv
@@ -11,7 +11,7 @@ python3 videotomp3.py \<videofile\>
 ### 5. Checking the result in the audio folder.
 cd audio
 
-# Installation instructions
+## Installation instructions
 
 ### 1. Create a venv environment in your directory.
 python3 -m venv venv
