@@ -18,7 +18,7 @@ sh pip-sources.sh
 
 ### 4. Conversion (example):
 ```python
-python3 videotomp3.py \<videofile\>
+python3 videotomp3.py <videofile>
 ```
 
 ### 5. Checking the result in the audio folder.

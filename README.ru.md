@@ -3,30 +3,61 @@
 Необходимые пакеты: python3, pip3
 
 ### 1. Создание venv окружения в корневом каталоге.
-`python3 -m venv venv`
+```bash
+python3 -m venv venv
+```
+
 ### 2. Активация виртуального окружения проекта.
-`source venv/bin/activate`
+```bash
+source venv/bin/activate
+```
+
 ### 3. Установка необходимых модулей python3.
-`sh pip-sources.sh`
+```bash
+sh pip-sources.sh
+```
+
 ### 4. Конвертация (пример):
-`python3 videotomp3.py \<videofile\>`
+```bash
+python3 videotomp3.py <videofile>
+```
+
 ### 5. Проверить результат в папке audio.
-`cd audio`
+```bash
+cd audio
+```
 
 <br />
 
 ## 💻 Инструкция по установке
 
 ### 1. Создание venv окружения в корневом каталоге.
-`python3 -m venv venv`
+```bash
+python3 -m venv venv
+```
+
 ### 2. Активация виртуального окружения проекта.
-`source venv/bin/activate`
+```bash
+source venv/bin/activate
+```
+
 ### 3. Установка необходимых модулей python3.
-`sh pip-sources.sh`
+```bash
+sh pip-sources.sh
+```
+
 ### 4. Установка pyinstaller.
-`pip3 install pyinstaller`
+```bash
+pip3 install pyinstaller
+```
+
 ### 5. Создание bin файла.
-`pyinstaller --onefile videotomp3.py`
+```bash
+pyinstaller --onefile videotomp3.py
+```
+
 ### 6. Проверить результат в папке audio.
-`cd audio`
+```bash
+cd audio
+```
 
