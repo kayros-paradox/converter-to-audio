@@ -40,7 +40,7 @@ videotomp3 <video>
 
 <br />
 
-## 📖 Instructions for use
+## 📖 Use without installation.
 
 ### 1. Activating the virtual environment.
 ```bash
